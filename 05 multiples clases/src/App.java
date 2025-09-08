@@ -1,3 +1,12 @@
+/**
+ * The Java program creates instances of Cat, Bird, and Dog classes, each with unique attributes and
+ * methods, then simulates a race between them and displays the winner using JOptionPane and terminal
+ * output.
+ */
+// The statement `import javax.swing.JOptionPane;` is importing the `JOptionPane` class from the
+// `javax.swing` package in Java. This allows the program to use the `JOptionPane` class to create
+// dialog boxes for displaying messages or getting user input in a graphical user interface (GUI)
+// environment.
 import javax.swing.JOptionPane;
 public class App {
     /*Vamos a crear un programa que tiene tres instancias de Gato, Ave y Perro
@@ -72,20 +81,30 @@ public class App {
         }
 
         //mostrar en un JOptionPane show message Dialog quién ganó la carrera
+        String mensajeGanador = "";
+        //mostrar en un JOptionPane show message Dialog quién ganó la carrera
+        //primero los competidores
+        mensajeGanador += "Competidores:\n";
+        mensajeGanador += "Gato: " + gato.getNombre() + "\n";
+        mensajeGanador += "Ave: " + ave.getNombre() + "\n";
+        mensajeGanador += "Perro: " + perro.getNombre() + "\n";
+
         switch(ganador){
             case GATO:
-                JOptionPane.showMessageDialog(null, "El ganador es el gato " + gato.getNombre());
+                mensajeGanador += "El ganador es el gato " + gato.getNombre() + "\n";
                 break;
             case AVE:
-                JOptionPane.showMessageDialog(null, "El ganador es el ave " + ave.getNombre());
+                mensajeGanador += "El ganador es el ave " + ave.getNombre() + "\n";
                 break;
             case PERRO:
-                JOptionPane.showMessageDialog(null, "El ganador es el perro " + perro.getNombre());
+                mensajeGanador += "El ganador es el perro " + perro.getNombre() + "\n";
                 break;
             default:
-                JOptionPane.showMessageDialog(null, "No hay ganador");
+                mensajeGanador += "No hay ganador\n";
                 break;
-        }   
+        }
+
+        JOptionPane.showMessageDialog(null, mensajeGanador);    
     }
 }
 
