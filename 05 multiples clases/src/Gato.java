@@ -51,4 +51,20 @@ public class Gato {
         dormir(8);
     }
 
+
+    //setters tienen como función asignar un valor a un atributos son necesarios cuando los atributos son privados
+    //es una buena práctica de programación tener los atributos privados y usar setters y getters para manipularlos
+    //setters se escribe set + nombreAtributo con la primera letra en mayúscula
+    //además podemos validar el valor que se va a asignar al atributo
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    //getters tienen como función obtener el valor de un atributo son necesarios cuando los atributos son privados
+    //getters se escribe get + nombreAtributo con la primera letra en mayúscula
+    public String getNombre() {
+        return nombre;
+    }
+
+
 }
